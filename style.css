@@ -518,5 +518,183 @@ footer {
   transform: rotateY(0deg);
 }
 
+/* ===== RESPONSIVIDADE PARA CELULAR ===== */
+@media (max-width: 600px) {
 
+  /* Cabeçalho */
+  header {
+    position: relative;
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 10px;
+  }
 
+  header h1 {
+    text-align: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
+  }
+
+  /* Imagem principal */
+  .hero {
+    height: 55vh;
+    padding: 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Seções com texto e vídeo */
+  .ods-section,
+  .ods-section.reverse {
+    flex-direction: column;
+    padding: 50px 6%;
+    gap: 25px;
+  }
+
+  .ods-text p,
+  .ods-text ul li {
+    font-size: 1rem;
+  }
+
+  .ods-img {
+  width: 100%;
+  overflow: hidden;
+  }
+
+  .ods-img video {
+    width: 110%;
+    height: auto;
+    margin-left: -5%;
+  }
+
+  /* Jogo da memória */
+  .game-section {
+    padding: 50px 5%;
+  }
+
+  .game-board {
+    grid-template-columns: repeat(3, 80px);
+    gap: 10px;
+  }
+
+  .memory-card {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Sobre nós */
+  .team {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* Outras seções */
+  .info-section,
+  #Referencias {
+    padding: 50px 6%;
+  }
+}
+
+/* ===== RESPONSIVIDADE PARA TABLET ===== */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+  /* Cabeçalho */
+  header {
+    padding: 15px 25px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  /* Imagem principal */
+  .hero {
+    height: 65vh;
+  }
+
+  /* Seções com texto e vídeo */
+  .ods-section,
+  .ods-section.reverse {
+    flex-direction: column;
+    padding: 70px 8%;
+    gap: 30px;
+  }
+
+  .ods-img {
+    width: 100%;
+  }
+
+  .ods-img video {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Jogo da memória */
+  .game-board {
+    grid-template-columns: repeat(4, 90px);
+    gap: 12px;
+  }
+
+  .memory-card {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* Sobre nós */
+  .team {
+    gap: 25px;
+  }
+
+  /* Outras seções */
+  .info-section,
+  #Referencias {
+    padding: 70px 8%;
+  }
+}
+
+/* ===== BOTÃO VOLTAR AO TOPO ===== */
+#btn-topo {
+  display: none;
+}
+
+/* Exibe o botão somente no celular */
+@media (max-width: 600px) {
+  #btn-topo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(58, 134, 169, 0.75);
+    color: white;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    cursor: pointer;
+    z-index: 1000;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  #btn-topo:hover {
+    background-color: #0B355A;
+  }
+}
