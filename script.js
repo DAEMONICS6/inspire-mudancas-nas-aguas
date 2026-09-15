@@ -140,28 +140,3 @@ restartBtn.addEventListener("click", () => {
 // Inicializa o jogo
 createBoard();
 
-// ===== Formulário de contato =====
-// Sem backend neste projeto: apenas exibimos uma mensagem de sucesso.
-const contatoForm = document.getElementById("contato-form");
-const feedback = document.getElementById("feedback");
-
-if (feedback) {
-  feedback.style.display = "none";
-}
-
-if (contatoForm) {
-  contatoForm.addEventListener("submit", (event) => {
-    event.preventDefault(); // evita recarregar a página
-
-    if (feedback) {
-      feedback.textContent = "Mensagem enviada com sucesso!";
-      feedback.classList.add("feedback-show");
-    }
-
-    contatoForm.reset();
-
-    setTimeout(() => {
-      if (feedback) feedback.classList.remove("feedback-show");
-    }, 6000);
-  });
-}
