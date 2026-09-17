@@ -46,7 +46,7 @@ Como é um projeto **100% front-end** (sem backend ou build tools), basta:
 
 1. Clonar o repositório:
    ```bash
-   git clone https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git
+   git clone https://github.com/jbc-code/inspire-mudancas-nas-aguas.git
    ```
 2. Abrir o arquivo `index.html` diretamente no navegador,
 

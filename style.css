@@ -563,14 +563,12 @@ footer {
   }
 
   .ods-img {
-  width: 100%;
-  overflow: hidden;
+    width: 100%;
   }
 
   .ods-img video {
-    width: 110%;
+    width: 100%;
     height: auto;
-    margin-left: -5%;
   }
 
   /* Jogo da memória */

@@ -159,3 +159,31 @@ btnTopo.addEventListener("click", () => {
     behavior: "smooth"
   });
 });
+
+// ===== Formulário de contato (Netlify Forms via AJAX) =====
+const contatoForm = document.getElementById("contato-form");
+const feedback = document.getElementById("feedback");
+
+if (contatoForm) {
+  contatoForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(contatoForm);
+    const encoded = new URLSearchParams(formData).toString();
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encoded,
+    })
+      .then(() => {
+        feedback.textContent = "Mensagem enviada com sucesso!";
+        feedback.classList.add("feedback-show");
+        contatoForm.reset();
+      })
+      .catch(() => {
+        feedback.textContent = "Não foi possível enviar. Tente novamente em instantes.";
+        feedback.classList.add("feedback-show");
+      });
+  });
+}
